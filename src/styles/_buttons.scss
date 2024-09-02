@@ -1,0 +1,46 @@
+@import '@/styles/_typography.scss';
+@import '@/styles/_variables.scss';
+
+
+// Определяем базовые стили для кнопок
+@mixin button-base($background-color, $text-color) {
+  background-color: $background-color;
+  color: $text-color;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    background-color: darken($background-color, 10%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    background-color: darken($background-color, 15%);
+  }
+
+  &:disabled {
+    background-color: $secondary-color;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+}
+
+// Стили для кнопок с основным фоном
+.button-primary {
+  @include button-base($primary-color, $light-color);
+}
+
+// Стили для кнопок с вторичным фоном
+.button-secondary {
+  @include button-base($secondary-color, $light-color);
+}
+
+// Стили для активных кнопок (например, вкладки)
+@mixin button-active {
+  background-color: lighten($primary-color, 10%);
+  font-weight: bold;
+}

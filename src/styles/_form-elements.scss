@@ -1,0 +1,171 @@
+// Импортируем переменные
+@import './variables';
+
+// Общие переменные для форм
+$input-padding: 0.75rem;
+$input-border-radius: 6px;
+$input-border-color: #999;
+$input-focus-border-color: $primary-color;
+$input-background-color: #fff;
+$input-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+$input-transition: border-color 0.3s ease, box-shadow 0.3s ease;
+$input-margin-bottom: 5px;
+
+$select-background-color: #fff;
+$select-icon-color: $secondary-color;
+
+$button-padding: 0.75rem 1.5rem;
+$button-margin: 0.15rem 0.25rem 0 0;
+
+$button-border-radius: 6px;
+$button-font-weight: 600;
+$button-transition: background-color 0.3s ease, transform 0.2s ease;
+$button-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+
+$hover-transform-scale: scale(1.05);
+
+// Стили для полей ввода
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: $input-padding;
+  border: 1px solid $input-border-color;
+  border-radius: $input-border-radius;
+  background-color: $input-background-color;
+  box-shadow: $input-box-shadow;
+  transition: $input-transition;
+  margin-bottom: $input-margin-bottom;
+
+  &:focus {
+    border-color: $input-focus-border-color;
+    box-shadow: 0 0 0 3px lighten($primary-color, 40%);
+    outline: none;
+  }
+
+  &::placeholder {
+    color: lighten($input-border-color, 20%);
+  }
+}
+
+// Стили для селектов
+select {
+  width: 100%;
+  padding: $input-padding;
+  border: 1px solid $input-border-color;
+  border-radius: $input-border-radius;
+  background-color: $select-background-color;
+  box-shadow: $input-box-shadow;
+  appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="%236c757d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"%3E%3Cpolyline points="6 9 12 15 18 9"%3E%3C/polyline%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 14px 14px;
+  transition: $input-transition;
+  margin-bottom: $input-margin-bottom;
+
+  &:focus {
+    border-color: $input-focus-border-color;
+    box-shadow: 0 0 0 3px lighten($primary-color, 40%);
+    outline: none;
+  }
+
+  &::-ms-expand {
+    display: none; // Скрыть стрелку в IE
+  }
+}
+
+// Стили для кнопок
+button, .btn {
+  display: inline-block;
+  padding: $button-padding;
+  font-weight: $button-font-weight;
+  color: $button-color;
+  background-color: $primary-color;
+  border: none;
+  border-radius: $button-border-radius;
+  cursor: pointer;
+  transition: $button-transition;
+  box-shadow: $button-box-shadow;
+  margin: $button-margin;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+    transform: $hover-transform-scale;
+  }
+
+  &:active {
+    background-color: darken($primary-color, 20%);
+    transform: scale(1);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px lighten($primary-color, 40%);
+  }
+
+  &.btn-secondary {
+    background-color: $secondary-color;
+
+    &:hover {
+      background-color: darken($secondary-color, 10%);
+    }
+
+    &:active {
+      background-color: darken($secondary-color, 20%);
+    }
+  }
+
+  &.btn-success {
+    background-color: $success-color;
+
+    &:hover {
+      background-color: darken($success-color, 10%);
+    }
+
+    &:active {
+      background-color: darken($success-color, 20%);
+    }
+  }
+
+  &.btn-danger {
+    background-color: $danger-color;
+
+    &:hover {
+      background-color: darken($danger-color, 10%);
+    }
+
+    &:active {
+      background-color: darken($danger-color, 20%);
+    }
+  }
+}
+
+// Стили для placeholder
+input::placeholder,
+textarea::placeholder,
+select::placeholder {
+  color: lighten($input-border-color, 100%);
+  opacity: 1; // Для обеспечения совместимости в некоторых браузерах
+}
+
+// Дополнительные стили для разных браузеров
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder,
+select:-ms-input-placeholder {
+  color: lighten($input-border-color, 100%);
+}
+
+input::-ms-input-placeholder,
+textarea::-ms-input-placeholder,
+select::-ms-input-placeholder {
+  color: lighten($input-border-color, 100%);
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder,
+select::-webkit-input-placeholder {
+  color: lighten($input-border-color, 100%);
+}

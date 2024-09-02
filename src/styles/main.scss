@@ -1,0 +1,24 @@
+@import './typography';
+@import './variables';
+@import './form-elements';
+
+*{box-sizing: border-box}
+html {
+  background-color: #dedede
+}
+body {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  max-width: 420px;
+  background: $light-color;
+  .main {
+    height: calc(100svh - $bottom-menu-height);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    padding: 10px 20px;
+  }
+}

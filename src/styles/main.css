@@ -1,0 +1,216 @@
+body {
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+h1, h2, h3 {
+  color: #343a40;
+  font-family: "Inter", Arial, sans-serif;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: #0062cc;
+}
+
+button, .btn {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 700;
+  color: #f8f9fa;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+button:hover, .btn:hover {
+  background-color: #0062cc;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=number],
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #999;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 5px;
+}
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=password]:focus,
+input[type=number]:focus,
+textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px #cce5ff;
+  outline: none;
+}
+input[type=text]::placeholder,
+input[type=email]::placeholder,
+input[type=password]::placeholder,
+input[type=number]::placeholder,
+textarea::placeholder {
+  color: #cccccc;
+}
+
+select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #999;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="%236c757d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"%3E%3Cpolyline points="6 9 12 15 18 9"%3E%3C/polyline%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 14px 14px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 5px;
+}
+select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px #cce5ff;
+  outline: none;
+}
+select::-ms-expand {
+  display: none;
+}
+
+button, .btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  color: #f8f9fa;
+  background-color: #007bff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  margin: 0.15rem 0.25rem 0 0;
+}
+button:hover, .btn:hover {
+  background-color: #0062cc;
+  transform: scale(1.05);
+}
+button:active, .btn:active {
+  background-color: #004a99;
+  transform: scale(1);
+}
+button:focus, .btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #cce5ff;
+}
+button.btn-secondary, .btn.btn-secondary {
+  background-color: #6c757d;
+}
+button.btn-secondary:hover, .btn.btn-secondary:hover {
+  background-color: #545b62;
+}
+button.btn-secondary:active, .btn.btn-secondary:active {
+  background-color: #3d4246;
+}
+button.btn-success, .btn.btn-success {
+  background-color: #28a745;
+}
+button.btn-success:hover, .btn.btn-success:hover {
+  background-color: #1e7e34;
+}
+button.btn-success:active, .btn.btn-success:active {
+  background-color: #145523;
+}
+button.btn-danger, .btn.btn-danger {
+  background-color: #dc3545;
+}
+button.btn-danger:hover, .btn.btn-danger:hover {
+  background-color: #bd2130;
+}
+button.btn-danger:active, .btn.btn-danger:active {
+  background-color: #921925;
+}
+
+input::placeholder,
+textarea::placeholder,
+select::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder,
+select:-ms-input-placeholder {
+  color: white;
+}
+
+input::-ms-input-placeholder,
+textarea::-ms-input-placeholder,
+select::-ms-input-placeholder {
+  color: white;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder,
+select::-webkit-input-placeholder {
+  color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #dedede;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  max-width: 420px;
+  background: #f8f9fa;
+}
+body .main {
+  height: calc(100svh - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+/*# sourceMappingURL=main.css.map */
